@@ -22,6 +22,11 @@ describe("Phrase", function() {
       assert(!nonPalindrome.palindrome());
     });
 
+    it("should return false for no alphabetic characters", function() {
+      let noAlpha = new Phrase("12345");
+      assert(!noAlpha.palindrome());
+    });
+
     it("should return true for a plain palindrome", function() {
       let plainPalindrome = new Phrase("racecar");
       assert(plainPalindrome.palindrome());
